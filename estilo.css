@@ -1,0 +1,136 @@
+/* --- 1. Estilos Base (Mobile First) --- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem; /* Unidades relativas */
+}
+
+h2 {
+    text-align: center;
+    color: #007bff;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+pre {
+    white-space: pre-wrap; /* Mantiene los espacios en blanco, pero ajusta la línea */
+    word-wrap: break-word; /* Rompe la palabra si es necesario para evitar desbordamiento */
+}
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* Apilados en móviles */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.image-container img {
+    width: 100%; /* Imágenes ocupan todo el ancho */
+    height: auto;
+    border-radius: 8px;
+}
+
+.card {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column; /* Apilados en móviles */
+    gap: 1rem;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    margin-top: 1rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* --- 2. Media Queries --- */
+
+/* Tabletas y pantallas medianas */
+@media (min-width: 768px) {
+    .image-container {
+        flex-direction: row; /* Imágenes en fila */
+    }
+
+    .image-container img {
+        width: 50%; /* Cada imagen ocupa la mitad del contenedor */
+    }
+
+    .grid-container {
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila */
+        justify-content: space-between;
+    }
+
+    .card {
+        flex-basis: calc(50% - 0.5rem); /* Dos tarjetas por fila, restando el gap */
+    }
+}
+
+/* Escritorio y pantallas grandes */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .card {
+        flex-basis: calc(33.33% - 0.7rem); /* Tres tarjetas por fila */
+    }
+}

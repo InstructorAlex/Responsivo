@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web Responsivo: Guía Práctica</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Guía para un Diseño Web Responsivo</h1>
+            <p>Aprende a crear sitios que se adapten a cualquier pantalla.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>¿Qué es el Diseño Responsivo?</h2>
+            <p>Es la práctica de crear sitios web que ofrecen una experiencia de usuario óptima en una amplia gama de dispositivos, desde computadoras de escritorio hasta teléfonos móviles y tabletas. Se trata de que el contenido se vea y funcione bien sin importar el tamaño de la pantalla.</p>
+            <div class="image-container">
+                <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Dispositivo Móvil">
+                <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Dispositivo de Escritorio">
+            </div>
+        </section>
+
+        <section class="principles">
+            <h2>Principios Clave</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>1. El Viewport</h3>
+                    <p>La base de todo. Con la etiqueta `&lt;meta name="viewport"&gt;`, le decimos al navegador que el ancho de la página debe ser igual al ancho del dispositivo. Sin esto, el diseño responsivo simplemente no funciona.</p>
+                    <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                </div>
+                <div class="card">
+                    <h3>2. Unidades Relativas</h3>
+                    <p>El uso de unidades como `%`, `em`, `rem`, y `vw` es fundamental. A diferencia de los píxeles, estas unidades se ajustan según el tamaño del contenedor o del viewport, garantizando que los elementos escalen de forma fluida.</p>
+                    <pre><code>font-size: 1.2rem;
+width: 80%;
+margin: 2vw;</code></pre>
+                </div>
+                <div class="card">
+                    <h3>3. Media Queries</h3>
+                    <p>Las Media Queries nos permiten aplicar diferentes estilos CSS en función de las características del dispositivo, como su ancho. Esto nos da el control para reorganizar el diseño en diferentes "puntos de ruptura" (breakpoints).</p>
+                    <pre><code>@media (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+        
+        <section class="video-section">
+            <h2>Video explicativo</h2>
+            <p>Observa cómo estos principios se aplican en la práctica en este breve tutorial.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/watch?v=oB8o2jfUcZ8" width="560" height="315" frameborder="0"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Guía de Desarrollo Web. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
